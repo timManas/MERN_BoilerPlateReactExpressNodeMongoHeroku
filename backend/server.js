@@ -28,5 +28,10 @@ const connectDB = async () => {
 // Connect Backend to MongoDB
 connectDB()
 
+// Initialize the Routes
+app.get('/', (req, res) => {
+  res.send('API is running')
+})
+
 // Set up backend to listen to PORT 5000
 app.listen(PORT, console.log('Server is running on PORT 5000'))
