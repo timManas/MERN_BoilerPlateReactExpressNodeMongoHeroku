@@ -33,6 +33,9 @@ connectDB()
 //   res.send('API is running')
 // })
 
+// Make the upload folder static
+const __dirname = path.resolve()
+
 // RUN THIS ONLY IN PRODUCTION MODE
 if (process.env.NODE_ENV === 'production') {
   // Set the 'build' folder as a static folder
