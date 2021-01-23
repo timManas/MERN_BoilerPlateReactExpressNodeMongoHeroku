@@ -31,7 +31,6 @@ connectDB()
 const __dirname = path.resolve()
 
 // Initialize the Routes
-// RUN THIS ONLY IN PRODUCTION MODE
 if (process.env.NODE_ENV === 'production') {
   // Set the 'build' folder as a static folder
   // Why ? So we can access the build folder and load the index.html
