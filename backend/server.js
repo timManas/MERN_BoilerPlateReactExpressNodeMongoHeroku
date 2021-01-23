@@ -1,8 +1,7 @@
+import path from 'path'
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
-
-const PORT = 5000
 
 // Initialize Dot Env File
 dotenv.config()
@@ -28,14 +27,10 @@ const connectDB = async () => {
 // Connect Backend to MongoDB
 connectDB()
 
-// Initialize the Routes
-// app.get('/', (req, res) => {
-//   res.send('API is running')
-// })
-
 // Make the upload folder static
 const __dirname = path.resolve()
 
+// Initialize the Routes
 // RUN THIS ONLY IN PRODUCTION MODE
 if (process.env.NODE_ENV === 'production') {
   // Set the 'build' folder as a static folder
@@ -57,7 +52,6 @@ const PORT = process.env.PORT || 5000
 app.listen(
   PORT,
   console.log(
-    `Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`.green
-      .inverse
+    `Server is running in ${process.env.NODE_ENV} mode on port ${PORT}`
   )
 )
