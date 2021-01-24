@@ -21,6 +21,7 @@
 - npm i dotenv
 - npm i concurrently
 - npm i nodemon 
+- npm i path
 
 10. Set up package.json to run FE + BE together
 Add this to your package.json:
@@ -32,8 +33,8 @@ Add this to your package.json:
   },
 
 1.  Set Backend to use ES6 Modules
-- Open package.json and add this line below  "description" & "main"  key/value pair
-"type": "module",
+- Open package.json and add this line below  "description" & "main"  key/value pair:
+- "type": "module",
 
 12. Create .env file
 - Place this code there:
